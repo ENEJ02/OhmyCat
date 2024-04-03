@@ -1,0 +1,44 @@
+:root {
+  --navbar: #061339;
+  --blan: #fff;
+  --taille: 22px;
+}
+
+.couleurFont {
+  background: var(--navbar);
+  border-color: var(--navbar);
+}
+
+.couleurFont .navbar-brand {
+  color: var(--blan);
+  font-size: var(--taille);
+}
+
+/* Le premier bloc */
+
+#enTete {
+  background-image: url("../img/background.jpg");
+  background-repeat: repeat;
+  /* background-color: #b9cdff; */
+}
+
+#enTete h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  padding: 50px 0;
+  margin: 20px auto;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* 2ème bloc */
+#contenu {
+  margin-top: 50px;
+}
+
+#contenu aside h2 {
+  color: #2f4073;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px auto 20px;
+}

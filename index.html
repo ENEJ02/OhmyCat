@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <title>OhMyCats !</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar couleurFont">
+      <div class="container">
+        <a class="navbar-brand" href="#">OhMyCats !</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="enTete">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>Adoptez un chat trop bon !</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contenu">
+      <div class="container">
+        <div class="row flex-row-reverse">
+          <div class="col-md-8">
+            <div id="carouselCats" class="carousel slide" data-bs-ride="true">
+              <ol class="carousel-indicators">
+                <li data-bs-target="#carouselCats" data-bs-slide-to="0" class="active" aria-current="true"
+                  aria-label="Slide 1"></li>
+                <li data-bs-target="#carouselCats" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                <li data-bs-target="#carouselCats" data-bs-slide-to="2" aria-label="Slide 3"></li>
+                <li data-bs-target="#carouselCats" data-bs-slide-to="3" aria-label="Slide 4"></li>
+                <li data-bs-target="#carouselCats" data-bs-slide-to="4" aria-label="Slide 5"></li>
+              </ol>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/chat_1.jpg" class="d-block w-100" alt="chat_1" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Sushi</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/chat_2.jpg" class="d-block w-100" alt="chat_2" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Maki</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/chat_3.jpg" class="d-block w-100" alt="chat_3" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Sashimi</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/chat_4.jpg" class="d-block w-100" alt="chat_4" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Yakitori</h5>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="img/chat_5.jpg" class="d-block w-100" alt="chat_5" />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Onigiri</h5>
+                  </div>
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselCats" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselCats" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <aside class="col-md-3">
+            <h2>Les chats à adopter</h2>
+            <p id="messageValide" class="d-none alert alert-success">
+              Réussi
+            </p>
+            <form id="formCats">
+              <div class="form-group">
+                <label for="choice">Choix du chat :</label>
+                <select name="choice" id="choice" class="form-select">
+                  <option value="" selected>--- Sélectionnez ---</option>
+                  <option value="sushi">Sushi</option>
+                  <option value="maki">Maki</option>
+                  <option value="sashimi">Sashimi</option>
+                  <option value="yakitori">Yakitori</option>
+                  <option value="origiri">Onigiri</option>
+                </select>
+                <p id="erreurSelect" class="d-none alert alert-danger">
+                  Veuillez choisir un chat !
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="raison" class="form-label">Raison d'adoption</label>
+                <textarea class="form-control" id="raison" name="raison" rows="10"
+                  placeholder="Saisissez ici les raisons pour lesquelles vous souhaitez adopter ce chat..."></textarea>
+                <p id="erreurArea" class="d-none alert alert-danger">
+                  Veuillez saisir !
+                </p>
+              </div>
+              <div class="form-group mt-3">
+                <input type="submit" id="envoyer" class="btn btn-success" value="Envoyer" />
+                <input type="reset" class="btn btn-danger" value="Annuler" />
+              </div>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
